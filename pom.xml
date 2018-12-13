@@ -355,7 +355,7 @@
                                     <location>${project.basedir}</location>
                                 </offlineLink>
                             </offlineLinks>
-                            <failOnError>true</failOnError>
+                            <failOnError>false</failOnError>
                             <javadocExecutable>/opt/jdk11/jdk-11/bin/javadoc</javadocExecutable>
                         </configuration>
                         <dependencies>
