@@ -202,7 +202,7 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jar-plugin</artifactId>
                         <configuration>
-                            <classifier>${jwebmp.runtime.classifier}</classifier>
+
                         </configuration>
                     </plugin>
 
@@ -518,6 +518,17 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>devkit</id>
+            <modules>
+                <module>GuicedEE</module>
+                <module>JWebMPCore</module>
+                <module>ThirdParty</module>
+                <module>JPMSPending</module>
+                <module>JWebMPPlugins</module>
+            </modules>
+        </profile>
+
     </profiles>
 
     <reporting>

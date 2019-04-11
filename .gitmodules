@@ -1,0 +1,15 @@
+[submodule "JWebMPCore"]
+	path = JWebMPCore
+	url = https://github.com/GedMarc/JWebMP-Core.git
+[submodule "GuicedEE"]
+	path = GuicedEE
+	url = https://github.com/GedMarc/GuicedEE-Parent.git
+[submodule "ThirdParty"]
+	path = ThirdParty
+	url = https://github.com/GedMarc/JPMSThirdPartyParent.git
+[submodule "JPMSPending"]
+	path = JPMSPending
+	url = https://github.com/GedMarc/JPMSPendingParent.git
+[submodule "JWebMPPlugins"]
+	path = JWebMPPlugins
+	url = https://github.com/GedMarc/JWebMP-PluginsParent.git
