@@ -1,15 +1,20 @@
 [submodule "JWebMPCore"]
 	path = JWebMPCore
 	url = https://github.com/GedMarc/JWebMP-Core.git
+	ignore = dirty
 [submodule "GuicedEE"]
 	path = GuicedEE
 	url = https://github.com/GedMarc/GuicedEE-Parent.git
+	ignore = dirty
 [submodule "ThirdParty"]
 	path = ThirdParty
 	url = https://github.com/GedMarc/JPMSThirdPartyParent.git
+	ignore = dirty
 [submodule "JPMSPending"]
 	path = JPMSPending
 	url = https://github.com/GedMarc/JPMSPendingParent.git
+	ignore = dirty
 [submodule "JWebMPPlugins"]
 	path = JWebMPPlugins
 	url = https://github.com/GedMarc/JWebMP-PluginsParent.git
+	ignore = dirty
