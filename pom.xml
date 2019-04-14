@@ -525,6 +525,11 @@
                 <module>JWebMPCore</module>
                 <module>ThirdParty</module>
                 <module>JPMSPending</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>enable-plugins</id>
+            <modules>
                 <module>JWebMPPlugins</module>
             </modules>
         </profile>
