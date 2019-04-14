@@ -18,3 +18,6 @@
 	path = JWebMPPlugins
 	url = https://github.com/GedMarc/JWebMP-PluginsParent.git
 	ignore = dirty
+[submodule "JWebMPExamples"]
+	path = JWebMPExamples
+	url = https://github.com/GedMarc/JWebMP-Examples-Parent.git

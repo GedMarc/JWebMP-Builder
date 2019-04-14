@@ -533,7 +533,12 @@
                 <module>JWebMPPlugins</module>
             </modules>
         </profile>
-
+        <profile>
+            <id>enable-examples</id>
+            <modules>
+                <module>JWebMPExamples</module>
+            </modules>
+        </profile>
     </profiles>
 
     <reporting>
