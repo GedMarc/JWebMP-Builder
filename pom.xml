@@ -118,6 +118,11 @@
                                 <exclude>module-info.java</exclude>
                             </excludes>
                         </configuration>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                            </execution>
+                        </executions>
                     </plugin>
 
                     <plugin>
@@ -128,6 +133,11 @@
                                 <additionalOption>-Xdoclint:none</additionalOption>
                             </additionalOptions>
                         </configuration>
+                        <executions>
+                            <execution>
+                                <id>attach-javadoc</id>
+                            </execution>
+                        </executions>
                     </plugin>
 
                     <plugin>
@@ -220,6 +230,11 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                            </execution>
+                        </executions>
                     </plugin>
 
                     <plugin>
@@ -236,6 +251,11 @@
                             <failOnError>true</failOnError>
                             <javadocExecutable>/opt/java-10-openjdk-amd64//bin/javadoc</javadocExecutable>
                         </configuration>
+                        <executions>
+                            <execution>
+                                <id>attach-javadoc</id>
+                            </execution>
+                        </executions>
                         <dependencies>
                             <dependency>
                                 <groupId>org.ow2.asm</groupId>
@@ -318,6 +338,11 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                            </execution>
+                        </executions>
                     </plugin>
 
                     <plugin>
@@ -334,6 +359,11 @@
                             <failOnError>false</failOnError>
                             <javadocExecutable>/opt/jdk11/jdk-11/bin/javadoc</javadocExecutable>
                         </configuration>
+                        <executions>
+                            <execution>
+                                <id>attach-javadoc</id>
+                            </execution>
+                        </executions>
                         <dependencies>
                             <dependency>
                                 <groupId>org.ow2.asm</groupId>
@@ -413,6 +443,11 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                            </execution>
+                        </executions>
                     </plugin>
 
                     <plugin>
@@ -429,6 +464,11 @@
                             <failOnError>false</failOnError>
                             <javadocExecutable>/opt/jdk11/jdk-11/bin/javadoc</javadocExecutable>
                         </configuration>
+                        <executions>
+                            <execution>
+                                <id>attach-javadoc</id>
+                            </execution>
+                        </executions>
                         <dependencies>
                             <dependency>
                                 <groupId>org.ow2.asm</groupId>
