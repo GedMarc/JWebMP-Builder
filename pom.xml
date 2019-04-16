@@ -574,6 +574,12 @@
             </modules>
         </profile>
         <profile>
+            <id>enable-apps</id>
+            <modules>
+                <module>JWebMPApps</module>
+            </modules>
+        </profile>
+        <profile>
             <id>enable-examples</id>
             <modules>
                 <module>JWebMPExamples</module>
