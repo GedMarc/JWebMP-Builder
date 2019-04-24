@@ -59,16 +59,6 @@
                 <maven.compiler.target>1.8</maven.compiler.target>
                 <jwebmp.runtime.classifier></jwebmp.runtime.classifier>
             </properties>
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <groupId>javax.transaction</groupId>
-                        <artifactId>jta</artifactId>
-                        <version>${javax.transaction.api}</version>
-                        <type>jar</type>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
             <build>
                 <plugins>
                     <plugin>
@@ -162,146 +152,6 @@
                 </resources>
             </build>
         </profile>
-        <profile>
-            <id>jdk10</id>
-            <properties>
-                <jdk.version>1.10</jdk.version>
-                <maven.compiler.source>1.10</maven.compiler.source>
-                <maven.compiler.target>1.10</maven.compiler.target>
-                <maven.compiler.release>10</maven.compiler.release>
-                <jwebmp.runtime.classifier></jwebmp.runtime.classifier>
-            </properties>
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <groupId>javax.transaction</groupId>
-                        <artifactId>javax.transaction-api</artifactId>
-                        <version>${javax.transaction.transactionapi}</version>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-compiler-plugin</artifactId>
-                        <configuration>
-                            <annotationProcessorPaths>
-                                <annotationProcessorPath>
-                                    <groupId>javax.xml.bind</groupId>
-                                    <artifactId>jaxb-api</artifactId>
-                                    <version>${jaxb.version}</version>
-                                </annotationProcessorPath>
-                            </annotationProcessorPaths>
-                            <compilerArgs>
-                                <arg>-AaddGeneratedAnnotation=false</arg>
-                                <arg>--patch-module</arg>
-                                <arg>java.transaction=${settings.localRepository}/javax/transaction/javax.transaction-api/${javax.transaction.transactionapi}/javax.transaction-api-${javax.transaction.transactionapi}.jar</arg>
-                                <arg>--patch-module</arg>
-                                <arg>java.xml.bind=${settings.localRepository}/javax/xml/bind/jaxb-api/${jaxb.version}/jaxb-api-${jaxb.version}.jar</arg>
-                            </compilerArgs>
-                            <compilerArguments>
-                                <AaddGeneratedAnnotation>false</AaddGeneratedAnnotation>
-                                <Adebug>true</Adebug>
-                            </compilerArguments>
-                            <failOnError>true</failOnError>
-                        </configuration>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-jar-plugin</artifactId>
-                        <configuration>
-
-                        </configuration>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <configuration>
-                            <skipTests>true</skipTests>
-                            <argLine>
-                                --illegal-access=permit
-                            </argLine>
-                        </configuration>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>attach-sources</id>
-                            </execution>
-                        </executions>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <configuration>
-                            <detectJavaApiLink>false</detectJavaApiLink>
-                            <offlineLinks>
-                                <offlineLink>
-                                    <url>https://docs.oracle.com/javase/${maven.compiler.release}/docs/api/</url>
-                                    <location>${project.basedir}</location>
-                                </offlineLink>
-                            </offlineLinks>
-                            <failOnError>true</failOnError>
-                            <javadocExecutable>/opt/java-10-openjdk-amd64//bin/javadoc</javadocExecutable>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>attach-javadoc</id>
-                            </execution>
-                        </executions>
-                        <dependencies>
-                            <dependency>
-                                <groupId>org.ow2.asm</groupId>
-                                <artifactId>asm</artifactId>
-                                <version>${maven.asm.version}</version>
-                            </dependency>
-                        </dependencies>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>build-helper-maven-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>add-source</id>
-                                <phase>generate-sources</phase>
-                                <goals>
-                                    <goal>add-source</goal>
-                                </goals>
-                                <configuration>
-                                    <sources>
-                                        <source>src/main/java</source>
-                                        <source>src/jre10/java</source>
-                                    </sources>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-
-                <resources>
-                    <resource>
-                        <directory>src/jre10/resources</directory>
-                        <excludes>
-                            <exclude>.gitignore</exclude>
-                        </excludes>
-                    </resource>
-                    <resource>
-                        <directory>src/main/resources</directory>
-                        <excludes>
-                            <exclude>.gitignore</exclude>
-                        </excludes>
-                    </resource>
-                </resources>
-            </build>
-        </profile>
 
         <profile>
             <id>jdk11</id>
@@ -311,15 +161,6 @@
                 <maven.compiler.target>1.11</maven.compiler.target>
                 <maven.compiler.release>11</maven.compiler.release>
             </properties>
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <groupId>javax.transaction</groupId>
-                        <artifactId>javax.transaction-api</artifactId>
-                        <version>${javax.transaction.transactionapi}</version>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
             <build>
                 <plugins>
                     <plugin>
@@ -420,15 +261,6 @@
                 <maven.compiler.target>1.12</maven.compiler.target>
                 <maven.compiler.release>12</maven.compiler.release>
             </properties>
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <groupId>javax.transaction</groupId>
-                        <artifactId>javax.transaction-api</artifactId>
-                        <version>${javax.transaction.transactionapi}</version>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
             <build>
                 <plugins>
                     <plugin>
