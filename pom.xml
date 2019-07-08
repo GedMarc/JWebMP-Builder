@@ -43,6 +43,7 @@
                     <include>**/*.html</include>
                     <include>**/*.htm</include>
                     <include>**/*.txt</include>
+                    <include>**/*.sql</include>
                 </includes>
             </resource>
             <resource>
