@@ -309,7 +309,7 @@
                                 </offlineLink>
                             </offlineLinks>
                             <failOnError>false</failOnError>
-                            <javadocExecutable>/opt/jdk11/jdk-11/bin/javadoc</javadocExecutable>
+                            <javadocExecutable>/opt/jdk12/bin/javadoc</javadocExecutable>
                         </configuration>
                         <executions>
                             <execution>
