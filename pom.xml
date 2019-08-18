@@ -63,6 +63,25 @@
                     <exclude>**/*.sh</exclude>
                 </excludes>
             </resource>
+            <resource>
+                <directory>src/main/webapp</directory>
+                <targetPath>${project.build.outputDirectory}/META-INF/resources</targetPath>
+                <excludes>
+                    <exclude>**/*.gzip</exclude>
+                    <exclude>**/*.map</exclude>
+                    <exclude>**/*.md</exclude>
+                    <exclude>**/*.md</exclude>
+                    <exclude>**/package.json</exclude>
+                    <exclude>**/bower.json</exclude>
+                    <exclude>**/.bower.json</exclude>
+                    <exclude>**/.gitignore</exclude>
+                    <exclude>**/.jshint</exclude>
+                    <exclude>**/.jshint</exclude>
+                    <exclude>**/Gruntfile.js</exclude>
+                    <exclude>**/*.sh</exclude>
+                </excludes>
+            </resource>
+
         </resources>
     </build>
 
@@ -164,7 +183,26 @@
                             <exclude>.gitignore</exclude>
                         </excludes>
                     </resource>
+                    <resource>
+                        <directory>src/jre8/webapp</directory>
+                        <targetPath>${project.build.outputDirectory}/META-INF/resources</targetPath>
+                        <excludes>
+                            <exclude>**/*.gzip</exclude>
+                            <exclude>**/*.map</exclude>
+                            <exclude>**/*.md</exclude>
+                            <exclude>**/*.md</exclude>
+                            <exclude>**/package.json</exclude>
+                            <exclude>**/bower.json</exclude>
+                            <exclude>**/.bower.json</exclude>
+                            <exclude>**/.gitignore</exclude>
+                            <exclude>**/.jshint</exclude>
+                            <exclude>**/.jshint</exclude>
+                            <exclude>**/Gruntfile.js</exclude>
+                            <exclude>**/*.sh</exclude>
+                        </excludes>
+                    </resource>
                 </resources>
+
             </build>
         </profile>
 
@@ -264,6 +302,24 @@
                             <exclude>.gitignore</exclude>
                         </excludes>
                     </resource>
+                    <resource>
+                        <directory>src/jre11/webapp</directory>
+                        <targetPath>${project.build.outputDirectory}/META-INF/resources</targetPath>
+                        <excludes>
+                            <exclude>**/*.gzip</exclude>
+                            <exclude>**/*.map</exclude>
+                            <exclude>**/*.md</exclude>
+                            <exclude>**/*.md</exclude>
+                            <exclude>**/package.json</exclude>
+                            <exclude>**/bower.json</exclude>
+                            <exclude>**/.bower.json</exclude>
+                            <exclude>**/.gitignore</exclude>
+                            <exclude>**/.jshint</exclude>
+                            <exclude>**/.jshint</exclude>
+                            <exclude>**/Gruntfile.js</exclude>
+                            <exclude>**/*.sh</exclude>
+                        </excludes>
+                    </resource>
                 </resources>
             </build>
         </profile>
@@ -360,7 +416,26 @@
                             <exclude>.gitignore</exclude>
                         </excludes>
                     </resource>
+                    <resource>
+                        <directory>src/jre11/webapp</directory>
+                        <targetPath>${project.build.outputDirectory}/META-INF/resources</targetPath>
+                        <excludes>
+                            <exclude>**/*.gzip</exclude>
+                            <exclude>**/*.map</exclude>
+                            <exclude>**/*.md</exclude>
+                            <exclude>**/*.md</exclude>
+                            <exclude>**/package.json</exclude>
+                            <exclude>**/bower.json</exclude>
+                            <exclude>**/.bower.json</exclude>
+                            <exclude>**/.gitignore</exclude>
+                            <exclude>**/.jshint</exclude>
+                            <exclude>**/.jshint</exclude>
+                            <exclude>**/Gruntfile.js</exclude>
+                            <exclude>**/*.sh</exclude>
+                        </excludes>
+                    </resource>
                 </resources>
+
             </build>
         </profile>
 
