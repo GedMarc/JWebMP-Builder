@@ -253,8 +253,8 @@
             <modules>
                 <module>GuicedEE</module>
                 <module>JWebMPCore</module>
-                <module>ThirdParty</module>
-                <module>JPMSPending</module>
+                <!--<module>ThirdParty</module>
+                <module>JPMSPending</module>-->
             </modules>
         </profile>
         <profile>
