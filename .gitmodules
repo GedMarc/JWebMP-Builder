@@ -2,10 +2,6 @@
 	path = JWebMPCore
 	url = https://github.com/GedMarc/JWebMP-Core.git
 	ignore = dirty
-[submodule "GuicedEE"]
-	path = GuicedEE
-	url = https://github.com/GedMarc/GuicedEE-Parent.git
-	ignore = dirty
 [submodule "JWebMPPlugins"]
 	path = JWebMPPlugins
 	url = https://github.com/GedMarc/JWebMP-PluginsParent.git
