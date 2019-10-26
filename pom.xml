@@ -14,13 +14,6 @@
     <description>The Builder POM for JWebMP</description>
     <url>https://jwebmp.com</url>
 
-    <properties>
-        <jdk.version>1.12</jdk.version>
-        <maven.compiler.source>1.12</maven.compiler.source>
-        <maven.compiler.target>1.12</maven.compiler.target>
-        <maven.compiler.release>12</maven.compiler.release>
-    </properties>
-
     <build>
         <resources>
             <resource>
@@ -125,64 +118,6 @@
 
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                            <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-                            <addClasspath>true</addClasspath>
-                            <classpathPrefix>libs/</classpathPrefix>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>attach-sources</id>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <configuration>
-                    <detectJavaApiLink>false</detectJavaApiLink>
-                    <offlineLinks>
-                        <offlineLink>
-                            <url>https://docs.oracle.com/javase/${maven.compiler.release}/docs/api/</url>
-                            <location>${project.basedir}</location>
-                        </offlineLink>
-                    </offlineLinks>
-                    <failOnError>false</failOnError>
-                    <javadocExecutable>/opt/jdk12/bin/javadoc</javadocExecutable>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>attach-javadoc</id>
-                    </execution>
-                </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.ow2.asm</groupId>
-                        <artifactId>asm</artifactId>
-                        <version>${maven.asm.version}</version><type>jar</type>
-            </dependency>
-                </dependencies>
-            </plugin>
-
-            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
                 <executions>
@@ -203,58 +138,13 @@
                 </executions>
             </plugin>
         </plugins>
-
-
     </build>
 
     <profiles>
         <profile>
-            <id>m2e</id>
-            <activation>
-                <property>
-                    <name>m2e.version</name>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <!--suppress MavenModelInspection -->
-                        <groupId>org.eclipse.m2e</groupId>
-                        <!--suppress MavenModelInspection -->
-                        <artifactId>lifecycle-mapping</artifactId>
-                        <!--suppress MavenModelInspection -->
-                        <version>1.0.0</version>
-                        <configuration>
-                            <lifecycleMappingMetadata>
-                                <pluginExecutions>
-                                    <pluginExecution>
-                                        <pluginExecutionFilter>
-                                            <groupId>org.codehaus.mojo</groupId>
-                                            <artifactId>build-helper-maven-plugin</artifactId>
-                                            <versionRange>[1.0,)</versionRange>
-                                            <goals>
-                                                <goal>test-compile</goal>
-                                                <goal>compile</goal>
-                                            </goals>
-                                        </pluginExecutionFilter>
-                                        <action>
-                                            <execute/>
-                                        </action>
-                                    </pluginExecution>
-                                </pluginExecutions>
-                            </lifecycleMappingMetadata>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>devkit</id>
+            <id>enable-jwebmp</id>
             <modules>
-                <module>GuicedEE</module>
                 <module>JWebMPCore</module>
-                <!--<module>ThirdParty</module>
-                <module>JPMSPending</module>-->
             </modules>
         </profile>
         <profile>
