@@ -142,7 +142,7 @@
 
     <profiles>
         <profile>
-            <id>enable-jwebmp</id>
+            <id>enable-jwebmp-core</id>
             <modules>
                 <module>JWebMPCore</module>
             </modules>
