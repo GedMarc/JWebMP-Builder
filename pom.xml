@@ -65,7 +65,7 @@
             </resource>
             <resource>
                 <directory>src/main/webapp</directory>
-                <targetPath>${project.build.outputDirectory}/META-INF/resources</targetPath>
+                <targetPath>${project.build.outputDirectory}</targetPath>
                 <excludes>
                     <exclude>**/*.gzip</exclude>
                     <exclude>**/*.map</exclude>
@@ -81,63 +81,8 @@
                     <exclude>**/*.sh</exclude>
                 </excludes>
             </resource>
-            <resource>
-                <directory>src/jre11/resources</directory>
-                <excludes>
-                    <exclude>.gitignore</exclude>
-                </excludes>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-                <excludes>
-                    <exclude>.gitignore</exclude>
-                </excludes>
-            </resource>
-            <resource>
-                <directory>src/jre11/webapp</directory>
-                <targetPath>${project.build.outputDirectory}/META-INF/resources</targetPath>
-                <excludes>
-                    <exclude>**/*.gzip</exclude>
-                    <exclude>**/*.map</exclude>
-                    <exclude>**/*.md</exclude>
-                    <exclude>**/*.md</exclude>
-                    <exclude>**/package.json</exclude>
-                    <exclude>**/bower.json</exclude>
-                    <exclude>**/.bower.json</exclude>
-                    <exclude>**/.gitignore</exclude>
-                    <exclude>**/.jshint</exclude>
-                    <exclude>**/.jshint</exclude>
-                    <exclude>**/Gruntfile.js</exclude>
-                    <exclude>**/*.sh</exclude>
-                </excludes>
-            </resource>
+
         </resources>
-
-        <testResources>
-        </testResources>
-
-        <plugins>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>add-source</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>add-source</goal>
-                        </goals>
-                        <configuration>
-                            <sources>
-                                <source>src/main/java</source>
-                                <source>src/jre11/java</source>
-                                <source>jre11/</source>
-                            </sources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
     </build>
 
     <profiles>
@@ -165,6 +110,110 @@
                 <module>JWebMPExamples</module>
             </modules>
         </profile>
+
+        <profile>
+            <id>jdk8</id>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/jre8/resources</directory>
+                        <excludes>
+                            <exclude>**/*.gzip</exclude>
+                            <exclude>**/*.map</exclude>
+                            <exclude>**/*.md</exclude>
+                            <exclude>**/*.md</exclude>
+                            <exclude>**/package.json</exclude>
+                            <exclude>**/bower.json</exclude>
+                            <exclude>**/.bower.json</exclude>
+                            <exclude>**/.gitignore</exclude>
+                            <exclude>**/.jshint</exclude>
+                            <exclude>**/.jshint</exclude>
+                            <exclude>**/Gruntfile.js</exclude>
+                            <exclude>**/*.sh</exclude>
+                        </excludes>
+                    </resource>
+                    <resource>
+                        <directory>src/jre8/webapp</directory>
+                        <targetPath>${project.build.outputDirectory}/META-INF/resources</targetPath>
+                        <excludes>
+                            <exclude>**/*.gzip</exclude>
+                            <exclude>**/*.map</exclude>
+                            <exclude>**/*.md</exclude>
+                            <exclude>**/*.md</exclude>
+                            <exclude>**/package.json</exclude>
+                            <exclude>**/bower.json</exclude>
+                            <exclude>**/.bower.json</exclude>
+                            <exclude>**/.gitignore</exclude>
+                            <exclude>**/.jshint</exclude>
+                            <exclude>**/.jshint</exclude>
+                            <exclude>**/Gruntfile.js</exclude>
+                            <exclude>**/*.sh</exclude>
+                        </excludes>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+
+        <profile>
+            <id>jdk9</id>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/jre11/resources</directory>
+                        <excludes>
+                            <exclude>**/*.gzip</exclude>
+                            <exclude>**/*.map</exclude>
+                            <exclude>**/*.md</exclude>
+                            <exclude>**/*.md</exclude>
+                            <exclude>**/package.json</exclude>
+                            <exclude>**/bower.json</exclude>
+                            <exclude>**/.bower.json</exclude>
+                            <exclude>**/.gitignore</exclude>
+                            <exclude>**/.jshint</exclude>
+                            <exclude>**/.jshint</exclude>
+                            <exclude>**/Gruntfile.js</exclude>
+                            <exclude>**/*.sh</exclude>
+                        </excludes>
+                    </resource>
+                    <resource>
+                        <directory>src/main/resources</directory>
+                        <excludes>
+                            <exclude>**/*.gzip</exclude>
+                            <exclude>**/*.map</exclude>
+                            <exclude>**/*.md</exclude>
+                            <exclude>**/*.md</exclude>
+                            <exclude>**/package.json</exclude>
+                            <exclude>**/bower.json</exclude>
+                            <exclude>**/.bower.json</exclude>
+                            <exclude>**/.gitignore</exclude>
+                            <exclude>**/.jshint</exclude>
+                            <exclude>**/.jshint</exclude>
+                            <exclude>**/Gruntfile.js</exclude>
+                            <exclude>**/*.sh</exclude>
+                        </excludes>
+                    </resource>
+                    <resource>
+                        <directory>src/jre11/webapp</directory>
+                        <targetPath>${project.build.outputDirectory}</targetPath>
+                        <excludes>
+                            <exclude>**/*.gzip</exclude>
+                            <exclude>**/*.map</exclude>
+                            <exclude>**/*.md</exclude>
+                            <exclude>**/*.md</exclude>
+                            <exclude>**/package.json</exclude>
+                            <exclude>**/bower.json</exclude>
+                            <exclude>**/.bower.json</exclude>
+                            <exclude>**/.gitignore</exclude>
+                            <exclude>**/.jshint</exclude>
+                            <exclude>**/.jshint</exclude>
+                            <exclude>**/Gruntfile.js</exclude>
+                            <exclude>**/*.sh</exclude>
+                        </excludes>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+
     </profiles>
 
     <reporting>
