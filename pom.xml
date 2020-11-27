@@ -18,6 +18,7 @@
         <resources>
             <resource>
                 <directory>jar-resources</directory>
+                <targetPath>${build.outputDirectory}/META-INF/resources/</targetPath>
                 <excludes>
                     <exclude>**/*.gzip</exclude>
                     <exclude>**/*.map</exclude>
@@ -65,7 +66,7 @@
             </resource>
             <resource>
                 <directory>src/main/webapp</directory>
-                <targetPath>${project.build.outputDirectory}</targetPath>
+                <targetPath>${build.outputDirectory}/META-INF/resources/</targetPath>
                 <excludes>
                     <exclude>**/*.gzip</exclude>
                     <exclude>**/*.map</exclude>
