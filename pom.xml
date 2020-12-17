@@ -21,7 +21,6 @@
                 <targetPath>${project.build.outputDirectory}/META-INF/resources/</targetPath>
                 <excludes>
                     <exclude>**/*.gzip</exclude>
-                    <exclude>**/*.map</exclude>
                     <exclude>**/*.md</exclude>
                     <exclude>**/*.md</exclude>
                     <exclude>**/package.json</exclude>
@@ -51,7 +50,6 @@
                 <directory>src/main/resources</directory>
                 <excludes>
                     <exclude>**/*.gzip</exclude>
-                    <exclude>**/*.map</exclude>
                     <exclude>**/*.md</exclude>
                     <exclude>**/*.md</exclude>
                     <exclude>**/package.json</exclude>
@@ -69,7 +67,6 @@
                 <targetPath>${project.build.outputDirectory}/META-INF/resources/</targetPath>
                 <excludes>
                     <exclude>**/*.gzip</exclude>
-                    <exclude>**/*.map</exclude>
                     <exclude>**/*.md</exclude>
                     <exclude>**/*.md</exclude>
                     <exclude>**/package.json</exclude>
