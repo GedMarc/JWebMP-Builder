@@ -17,3 +17,6 @@
 [submodule "ComponentTemplate"]
 	path = ComponentTemplate
 	url = https://github.com/GedMarc/JWebMP-ComponentTemplate.git
+[submodule "JWebMPThemes/MintonTheme"]
+	path = JWebMPThemes/MintonTheme
+	url = https://github.com/GedMarc/JWebMP-MintonTheme
