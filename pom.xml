@@ -94,6 +94,7 @@
             <id>enable-plugins</id>
             <modules>
                 <module>JWebMPPlugins</module>
+				<module>JWebMPThemes</module>
             </modules>
         </profile>
         <profile>
