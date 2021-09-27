@@ -23,3 +23,5 @@ persistence.xml
 **/*.classpath
 **/.settings
 /.settings
+/dependency-reduced-pom.xml
+/flatter.pom
