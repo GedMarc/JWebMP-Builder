@@ -10,7 +10,7 @@
     <groupId>com.jwebmp.themes</groupId>
     <artifactId>jwebmp-plugins-themes</artifactId>
     <packaging>pom</packaging>
-
+    <version>0.0.0_0-SNAPSHOT</version>
     <name>JWebMP  Themes</name>
     <description>The root maven group for a prebuilt collection of layout themes for JWebMP</description>
 
