@@ -16,7 +16,7 @@
     <description>The root maven group for a prebuilt collection of layout themes for JWebMP</description>
 
     <modules>
-        <module>MintonTheme</module>
+        <!-- <module>MintonTheme</module> -->
     </modules>
 
 </project>
